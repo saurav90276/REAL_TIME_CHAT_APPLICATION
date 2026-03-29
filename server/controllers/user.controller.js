@@ -45,7 +45,7 @@ export const signup = catchAsyncError(async(req , res, next)=>{
         },
     });
 
-    generateJWTToken(user, "User registered successfully, 201, res");
+    generateJWTToken(user, "User registered successfully", 201, res);
 });
 
 export const signin = catchAsyncError(async(req, res, next) => {

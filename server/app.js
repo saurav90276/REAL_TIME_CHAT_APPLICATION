@@ -12,7 +12,7 @@ const app = express();
 const __dirname = path.resolve();
 config({ path: "./config/config.env" });
 
-if (process.env.NODE_ENV !== "production") {
+
     app.use(
         cors({
             origin: [process.env.FRONTEND_URL],
@@ -20,7 +20,8 @@ if (process.env.NODE_ENV !== "production") {
             methods: ["GET", "POST", "PUT", "DELETE"],
         })
     );
-}
+
+
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
