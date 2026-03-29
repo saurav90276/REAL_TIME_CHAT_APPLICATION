@@ -35,13 +35,9 @@ app.use(
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/message", messageRouter);
 
-if (process.env.NODE_ENV === "production") {
-    app.use(express.static(path.join(__dirname, "../client/dist")));
-
-    app.use((req, res) => {
-        res.sendFile(path.join(__dirname, "../client", "dist", "index.html"));
-    })
-}
+app.get("/", (req, res) => {
+    res.send("API is running...");
+});
 
 dbConnection();
 export default app;
