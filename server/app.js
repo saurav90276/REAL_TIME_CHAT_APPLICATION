@@ -15,7 +15,10 @@ config({ path: "./config/config.env" });
 
     app.use(
         cors({
-            origin: [process.env.FRONTEND_URL],
+            origin: [
+                "http://localhost:5173",
+                "https://real-time-chat-application-one-iota.vercel.app/login"
+            ],
             credentials: true,
             methods: ["GET", "POST", "PUT", "DELETE"],
         })
