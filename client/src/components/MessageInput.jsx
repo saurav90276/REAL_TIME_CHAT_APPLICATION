@@ -105,7 +105,7 @@ const MessageInput = () => {
     }
     <form onSubmit={handleSendMessage} className="flex items-center gap-2">
       <div className="flex-1 flex gap-2">
-        <input type="text" placeholder="Type a message..." className="w-full px-4 py-2 text-slate-100 rounded-lg border border-slate-200 
+        <input type="text" placeholder="Type a message..." className="w-full px-4 py-2 text-slate-900 rounded-lg border border-slate-200 
         focus:outline-none focus:ring-2 focus:ring-blue-900 text-sm sm:text-base" value={text} onChange={(e)=> setText(e.target.value)}/>
 
         <input type="file" accept="image/*,video/*" ref={fileInputRef} className="hidden" onChange={handleMediaChange}/>
