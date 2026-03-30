@@ -17,7 +17,7 @@ config({ path: "./config/config.env" });
         cors({
             origin: [
                 "http://localhost:5173",
-                "https://real-time-chat-application-one-iota.vercel.app"
+                "https://real-time-chat-application-eight-umber.vercel.app"
             ],
             credentials: true,
             methods: ["GET", "POST", "PUT", "DELETE"],
