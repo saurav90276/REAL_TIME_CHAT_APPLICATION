@@ -23,9 +23,7 @@ app.use(
     })
 );
 
-app.options("*", (req, res) => {
-  res.sendStatus(200);
-});
+
 
 app.use(cookieParser());
 app.use(express.json());
