@@ -22,16 +22,16 @@ const Login = () => {
   }
 
   return <>
-  <div className="min-h-screen grid grid-cols-1 lg:grid-cols-2 bg-slate-800">
+  <div className="min-h-screen grid grid-cols-1 lg:grid-cols-2 bg-slate-800 ">
     {/* LEFT SIDE FORM  */}
     <div className="flex flex-col justify-center items-center px-6 py-12">
       <div className="w-full max-w-md">
         {/* LOGO & HEADING */}
         <div className="flex flex-col items-center mb-10">
-          <div className="bg-blue-300 p-3 rounded-lg">
+          <div className="bg-gradient-to-r from-red-300 to-gray-300 p-3 rounded-lg">
             <MessageSquare className="text-slate-800 w-6 h-6"/>
           </div>
-          <h1 className="text-2xl font-bold mt-4 text-cyan-300">Welcome Back</h1>
+          <h1 className="text-transparent text-4xl font-bold mt-4 bg-clip-text bg-gradient-to-r from-red-300 to-gray-300">Welcome Back</h1>
           <p className="text-slate-200 text-sm mt-2">Sign in to your account</p>
         </div>
 
@@ -44,12 +44,12 @@ const Login = () => {
             </label>
             {/* <h2 className="bg-slate-600 text-red-500">Rolex</h2> */}
             <div className="relative">
-              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-100">
+              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500">
                 <Mail className="w-5 h-5"/>
               </span>
               <input 
               type="email" className="w-full border border-slate-100 rounded-md py-2 pl-10 pr-3 focus:outline-none focus:ring-2
-               focus:ring-slate-500 text-slate-100"
+               focus:ring-slate-500 text-slate-950"
                placeholder="you@gmail.com" value={formData.email}
                onChange={(e)=>{
                 setFormData({...formData, email: e.target.value});
@@ -64,18 +64,18 @@ const Login = () => {
               Password
             </label>
             <div className="relative">
-              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-100">
+              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500">
                 <Lock className="w-5 h-5"/>
               </span>
               <input 
               type={showPassword? "text" : "password"} className="w-full border border-slate-100 rounded-md py-2 pl-10 pr-3 focus:outline-none focus:ring-2
-               focus:ring-slate-500 text-slate-100"
+               focus:ring-slate-500 text-slate-800"
                placeholder="********" value={formData.password}
                onChange={(e)=>{
                 setFormData({...formData, password: e.target.value});
                }}
               />
-              <button type="button" className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-200"
+              <button type="button" className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500"
                 onClick={()=> setShowPassword(!showPassword)}
               >
                {
