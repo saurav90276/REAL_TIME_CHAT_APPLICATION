@@ -1,24 +1,22 @@
-import {io} from "socket.io-client";
+import { io } from "socket.io-client";
 
 let socket = null;
 
-export const connectSocket = (userId) =>{
-    // socket = io(
-    //     import.meta.env.MODE === "development" ? "http://localhost:4000": "/" ,
-    //     {
-    //         query: {userId},
-    //     }
-
-    // );
-    const socket = io(import.meta.env.VITE_SERVER_URL);
+export const connectSocket = (userId) => {
+    if (!socket) {
+        socket = io(import.meta.env.VITE_SERVER_URL, {
+            query: { userId },
+            withCredentials: true,
+        });
+    }
     return socket;
-}
+};
 
 export const getSocket = () => socket;
 
 export const disconnectSocket = () => {
-    if(socket){
+    if (socket) {
         socket.disconnect();
-        socket=null;
+        socket = null;
     }
-}
+};
