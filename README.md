@@ -1,9 +1,6 @@
 💬 Real-Time Chat Application (MERN Stack)  :           
   A full-stack real-time chat application built using the MERN stack with secure authentication and instant messaging capabilities.
 
-🌐 Live Demo :
-https://real-time-chat-application-one-iota.vercel.app/login
-
 🚀 Features    :-     
 🔐 User Authentication (JWT & bcrypt)
 💬 Real-time messaging using Socket.io
